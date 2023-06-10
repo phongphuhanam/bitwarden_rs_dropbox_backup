@@ -3,6 +3,9 @@ FROM alpine:latest
 # set TZ default if not defined in ENVs
 ENV TZ=UTC
 
+# set backup tag to vaultwarden if not defined in ENVs
+ENV BACKUP_DATA_TAG=vaultwarden
+
 # install sqlite, curl, bash (for script)
 RUN apk add --no-cache \
     sqlite \

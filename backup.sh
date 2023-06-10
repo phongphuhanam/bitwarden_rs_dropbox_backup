@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # create backup filename
-BACKUP_FILE="vaultwarden_$(date "+%F-%H%M%S")"
+BACKUP_FILE="${BACKUP_DATA_TAG}_$(date "+%F-%H%M%S")"
 
 # use sqlite3 to create backup (avoids corruption if db write in progress)
 sqlite3 /data/db.sqlite3 ".backup '/tmp/db.sqlite3'"
